@@ -45,7 +45,7 @@ RUN set -ex && \
     (cd /tmp/.build/sshwifty && /try.sh npm run build && mv ./sshwifty /)
 
 # Build the final image for running
-FROM alpine:latest
+FROM alpine:3.18.3
 ENV SSHWIFTY_HOSTNAME= \
     SSHWIFTY_SHAREDKEY= \
     SSHWIFTY_DIALTIMEOUT=10 \
